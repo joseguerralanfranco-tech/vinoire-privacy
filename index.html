@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinoire — Política de Privacidad / Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8D9C0;
+      --gold-dim: #9A8470;
+      --bg: #0D0A06;
+      --surface: #1A120A;
+      --surface2: #241A0F;
+      --border: rgba(201,168,76,0.2);
+      --text: #E8D9C0;
+      --text-muted: #9A8470;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'EB Garamond', serif;
+      font-size: 17px;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* Background texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 80% 80%, rgba(201,168,76,0.03) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 64px 0 48px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 48px;
+    }
+
+    .logo-mark {
+      width: 56px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 24px;
+    }
+
+    .app-name {
+      font-family: 'Cinzel', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 8px;
+    }
+
+    .app-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* Language switcher */
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin: 32px 0 0;
+      flex-wrap: wrap;
+    }
+
+    .lang-btn {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      padding: 6px 16px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.25s;
+    }
+
+    .lang-btn:hover,
+    .lang-btn.active {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(201,168,76,0.06);
+    }
+
+    /* Content sections */
+    .policy-section {
+      display: none;
+    }
+
+    .policy-section.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy-article {
+      margin-bottom: 36px;
+      padding-left: 20px;
+      border-left: 1px solid var(--border);
+    }
+
+    .policy-article h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gold-light);
+      margin-bottom: 10px;
+      letter-spacing: 0.02em;
+    }
+
+    .policy-article p {
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .policy-article a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      transition: border-color 0.2s;
+    }
+
+    .policy-article a:hover {
+      border-color: var(--gold);
+    }
+
+    /* Updated date */
+    .updated {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      opacity: 0.7;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      color: var(--gold-dim);
+      margin-bottom: 8px;
+    }
+
+    .footer-note {
+      font-size: 13px;
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 24px auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-mark"></div>
+      <div class="app-name">VINOIRE</div>
+      <div class="app-tagline">Privacy Policy · Política de Privacidad</div>
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('es')">Español</button>
+        <button class="lang-btn" onclick="setLang('en')">English</button>
+        <button class="lang-btn" onclick="setLang('fr')">Français</button>
+        <button class="lang-btn" onclick="setLang('it')">Italiano</button>
+      </div>
+    </header>
+
+    <!-- ESPAÑOL -->
+    <div class="policy-section active" id="lang-es">
+      <div class="section-title">Términos de Uso y Política de Privacidad</div>
+      <p class="updated">Última actualización: Mayo 2026</p>
+
+      <div class="policy-article">
+        <h3>1. Aceptación</h3>
+        <p>Al descargar y usar Vinoire aceptas estos términos. Si no estás de acuerdo, no uses la app.</p>
+      </div>
+      <div class="policy-article">
+        <h3>2. Licencia</h3>
+        <p>Vinoire es una app de pago único. Al comprarla obtienes una licencia personal, no transferible, para usarla en tus dispositivos Apple.</p>
+      </div>
+      <div class="policy-article">
+        <h3>3. Privacidad y datos</h3>
+        <p>Vinoire no recolecta, transmite ni almacena ningún dato personal en servidores externos. Toda la información que ingresas — registros, fotos, notas — se guarda únicamente en tu dispositivo. No tenemos acceso a tus datos.</p>
+      </div>
+      <div class="policy-article">
+        <h3>4. Servicios de terceros</h3>
+        <p>Vinoire puede usar servicios de reconocimiento de imágenes para identificar etiquetas de vino. Esta función es opcional y puede no estar disponible en todas las versiones.</p>
+      </div>
+      <div class="policy-article">
+        <h3>5. Compras</h3>
+        <p>El precio de compra es único y no incluye suscripciones. No se realizan cobros adicionales. Las compras no son reembolsables salvo lo requerido por la ley aplicable o las políticas de Apple.</p>
+      </div>
+      <div class="policy-article">
+        <h3>6. Limitación de responsabilidad</h3>
+        <p>Vinoire se provee tal como está. No garantizamos que las recomendaciones de maridaje sean perfectas para todos los gustos. El desarrollador no es responsable por decisiones tomadas en base al contenido de la app.</p>
+      </div>
+      <div class="policy-article">
+        <h3>7. Cambios</h3>
+        <p>Podemos actualizar estos términos. Te notificaremos dentro de la app si hay cambios importantes.</p>
+      </div>
+      <div class="policy-article">
+        <h3>8. Contacto</h3>
+        <p><a href="mailto:joseguerralan@gmail.com">joseguerralan@gmail.com</a></p>
+      </div>
+      <div class="policy-article">
+        <h3>9. Jurisdicción</h3>
+        <p>Estos términos se rigen por las leyes de la República del Perú.</p>
+      </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="policy-section" id="lang-en">
+      <div class="section-title">Terms of Use and Privacy Policy</div>
+      <p class="updated">Last updated: May 2026</p>
+
+      <div class="policy-article">
+        <h3>1. Acceptance</h3>
+        <p>By downloading and using Vinoire you agree to these terms. If you disagree, do not use the app.</p>
+      </div>
+      <div class="policy-article">
+        <h3>2. License</h3>
+        <p>Vinoire is a one-time purchase app. Buying it grants you a personal, non-transferable license to use it on your Apple devices.</p>
+      </div>
+      <div class="policy-article">
+        <h3>3. Privacy and data</h3>
+        <p>Vinoire does not collect, transmit, or store any personal data on external servers. All information you enter — pairings, photos, notes — is stored exclusively on your device. We have no access to your data.</p>
+      </div>
+      <div class="policy-article">
+        <h3>4. Third-party services</h3>
+        <p>Vinoire may use image recognition services to identify wine labels. This feature is optional and may not be available in all versions.</p>
+      </div>
+      <div class="policy-article">
+        <h3>5. Purchases</h3>
+        <p>The purchase price is one-time and includes no subscriptions. No additional charges apply. Purchases are non-refundable except as required by applicable law or Apple's policies.</p>
+      </div>
+      <div class="policy-article">
+        <h3>6. Limitation of liability</h3>
+        <p>Vinoire is provided as is. We do not guarantee that pairing recommendations will suit every taste. The developer is not liable for decisions made based on app content.</p>
+      </div>
+      <div class="policy-article">
+        <h3>7. Changes</h3>
+        <p>We may update these terms. We will notify you within the app of any significant changes.</p>
+      </div>
+      <div class="policy-article">
+        <h3>8. Contact</h3>
+        <p><a href="mailto:joseguerralan@gmail.com">joseguerralan@gmail.com</a></p>
+      </div>
+      <div class="policy-article">
+        <h3>9. Jurisdiction</h3>
+        <p>These terms are governed by the laws of the Republic of Peru.</p>
+      </div>
+    </div>
+
+    <!-- FRANÇAIS -->
+    <div class="policy-section" id="lang-fr">
+      <div class="section-title">Conditions d'Utilisation et Politique de Confidentialité</div>
+      <p class="updated">Dernière mise à jour : Mai 2026</p>
+
+      <div class="policy-article">
+        <h3>1. Acceptation</h3>
+        <p>En téléchargeant et en utilisant Vinoire, vous acceptez ces conditions. Si vous n'êtes pas d'accord, n'utilisez pas l'application.</p>
+      </div>
+      <div class="policy-article">
+        <h3>2. Licence</h3>
+        <p>Vinoire est une application à achat unique. En l'achetant, vous obtenez une licence personnelle et non transférable pour l'utiliser sur vos appareils Apple.</p>
+      </div>
+      <div class="policy-article">
+        <h3>3. Confidentialité et données</h3>
+        <p>Vinoire ne collecte, ne transmet ni ne stocke aucune donnée personnelle sur des serveurs externes. Toutes les informations que vous saisissez — accords, photos, notes — sont stockées uniquement sur votre appareil. Nous n'avons pas accès à vos données.</p>
+      </div>
+      <div class="policy-article">
+        <h3>4. Services tiers</h3>
+        <p>Vinoire peut utiliser des services de reconnaissance d'images pour identifier les étiquettes de vin. Cette fonctionnalité est optionnelle et peut ne pas être disponible dans toutes les versions.</p>
+      </div>
+      <div class="policy-article">
+        <h3>5. Achats</h3>
+        <p>Le prix d'achat est unique et n'inclut pas d'abonnements. Aucun frais supplémentaire n'est appliqué. Les achats ne sont pas remboursables sauf si requis par la loi applicable ou les politiques d'Apple.</p>
+      </div>
+      <div class="policy-article">
+        <h3>6. Limitation de responsabilité</h3>
+        <p>Vinoire est fourni tel quel. Nous ne garantissons pas que les recommandations d'accords conviennent à tous les goûts. Le développeur n'est pas responsable des décisions prises sur la base du contenu de l'application.</p>
+      </div>
+      <div class="policy-article">
+        <h3>7. Modifications</h3>
+        <p>Nous pouvons mettre à jour ces conditions. Nous vous informerons dans l'application en cas de changements importants.</p>
+      </div>
+      <div class="policy-article">
+        <h3>8. Contact</h3>
+        <p><a href="mailto:joseguerralan@gmail.com">joseguerralan@gmail.com</a></p>
+      </div>
+      <div class="policy-article">
+        <h3>9. Juridiction</h3>
+        <p>Ces conditions sont régies par les lois de la République du Pérou.</p>
+      </div>
+    </div>
+
+    <!-- ITALIANO -->
+    <div class="policy-section" id="lang-it">
+      <div class="section-title">Termini di Utilizzo e Informativa sulla Privacy</div>
+      <p class="updated">Ultimo aggiornamento: Maggio 2026</p>
+
+      <div class="policy-article">
+        <h3>1. Accettazione</h3>
+        <p>Scaricando e utilizzando Vinoire accetti questi termini. Se non sei d'accordo, non utilizzare l'app.</p>
+      </div>
+      <div class="policy-article">
+        <h3>2. Licenza</h3>
+        <p>Vinoire è un'app ad acquisto unico. Acquistandola ottieni una licenza personale e non trasferibile per utilizzarla sui tuoi dispositivi Apple.</p>
+      </div>
+      <div class="policy-article">
+        <h3>3. Privacy e dati</h3>
+        <p>Vinoire non raccoglie, trasmette né archivia dati personali su server esterni. Tutte le informazioni che inserisci — abbinamenti, foto, note — vengono salvate esclusivamente sul tuo dispositivo. Non abbiamo accesso ai tuoi dati.</p>
+      </div>
+      <div class="policy-article">
+        <h3>4. Servizi di terze parti</h3>
+        <p>Vinoire può utilizzare servizi di riconoscimento immagini per identificare le etichette del vino. Questa funzione è opzionale e potrebbe non essere disponibile in tutte le versioni.</p>
+      </div>
+      <div class="policy-article">
+        <h3>5. Acquisti</h3>
+        <p>Il prezzo di acquisto è unico e non include abbonamenti. Non vengono applicati costi aggiuntivi. Gli acquisti non sono rimborsabili salvo quanto richiesto dalla legge applicabile o dalle politiche di Apple.</p>
+      </div>
+      <div class="policy-article">
+        <h3>6. Limitazione di responsabilità</h3>
+        <p>Vinoire viene fornita così com'è. Non garantiamo che i consigli di abbinamento siano perfetti per tutti i gusti. Lo sviluppatore non è responsabile per le decisioni prese in base al contenuto dell'app.</p>
+      </div>
+      <div class="policy-article">
+        <h3>7. Modifiche</h3>
+        <p>Potremmo aggiornare questi termini. Ti informeremo all'interno dell'app in caso di modifiche importanti.</p>
+      </div>
+      <div class="policy-article">
+        <h3>8. Contatto</h3>
+        <p><a href="mailto:joseguerralan@gmail.com">joseguerralan@gmail.com</a></p>
+      </div>
+      <div class="policy-article">
+        <h3>9. Giurisdizione</h3>
+        <p>Questi termini sono disciplinati dalle leggi della Repubblica del Perù.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <footer>
+      <div class="footer-logo">VINOIRE</div>
+      <div class="footer-note">© 2026 José Guerra. All rights reserved.</div>
+    </footer>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.policy-section').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
+      event.target.classList.add('active');
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+</html>
